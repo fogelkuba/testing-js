@@ -1,5 +1,5 @@
-const { add } = require('./index');
-const { assert, test } = require('./lib');
+const { add } = require('../src/index');
+const { assert, test } = require('../lib');
 
 test('The add Fn adds two numbers', () => {
     const actual = add(3, 4)
