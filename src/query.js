@@ -17,8 +17,7 @@ const parse = (queryString) => {
 }
 
 const removeEmpty = (obj) => {
-    Object.keys(obj).forEach(key => obj[key] === null || obj[key] === undefined) && delete obj[key]
-
+    Object.keys(obj).forEach((key) => (obj[key] === null || obj[key] === undefined) && delete obj[key])
     return obj
 }
 
@@ -34,5 +33,5 @@ const stringify = (queryObject) => {
 
 module.exports = {
     stringify,
-    parse
+    parse,
 }

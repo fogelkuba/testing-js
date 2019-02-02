@@ -18,7 +18,8 @@ describe('The ADD function test', function () {
 })
 
 
-// console.log('First Test');
+{
+    // console.log('First Test');
 
     const actual = add(5, 6)
     const expected = 11;
@@ -32,10 +33,10 @@ describe('The ADD function test', function () {
 
     // console.log('--> Test passed')
 
-// console.log('End of First Test');
+    // console.log('End of First Test');
 
 
-// console.log('Second Test: Check if error occurs when no arguments are passed');
+    // console.log('Second Test: Check if error occurs when no arguments are passed');
     // if throws error
     assert.throws(() => {
         add()
@@ -47,4 +48,5 @@ describe('The ADD function test', function () {
 
     // console.log('--> Test passed')
 
-// console.log('End of Second Test');
+    // console.log('End of Second Test');
+}
