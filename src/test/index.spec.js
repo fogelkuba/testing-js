@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { add } = require('./index');
+const { add } = require('./../index');
 
 
 describe('The ADD function test', function () {
