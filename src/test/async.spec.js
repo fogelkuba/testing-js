@@ -9,7 +9,7 @@ describe('The Async function test', function () {
                 done();
             });
         })
-        it('Should return "Miss Myers" found by id: 2', async () => {
+        it('Should return "Miss Myers" found by id: 2 | ASYNC', async () => {
             const result = await findUserById(2);
             assert.equal(result.user.name, 'Miss Myers')
         })
@@ -20,7 +20,7 @@ describe('The Async function test', function () {
             })
         });
     })
-    describe('The findUserByEmial function test', () => {
+    describe('The findUserByEmail function test', () => {
         it('Should return user by email', function () {
             return findUserByEmail('emily@gates.co.za').then(result => {
                 assert.equal(result.user.id, 3)
@@ -32,6 +32,13 @@ describe('The Async function test', function () {
             return findUserByEmail(email).catch(error => {
                 assert.equal(error.message, `User with email: ${email} was not found.`)
             })
+        });
+        it.only('Should throw err when user was not found by email- ASYNC', async () => {
+            try {
+                await findUserByEmail('Dupa@test.gmail.com');
+            } catch (err) {
+                assert(err.message, `User with email: Dupa@test.gmail.com was not found.`)
+            }
         });
     })
 })
