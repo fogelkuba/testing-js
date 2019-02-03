@@ -1,4 +1,4 @@
-const assert = require('assert');
+// const assert = require('assert');
 const { parse, stringify} = require('../query');
 
 describe('The query package', () => {
@@ -11,10 +11,12 @@ describe('The query package', () => {
                popular: 'true',
                category: 'nodejs'
             };
-            assert.deepEqual(actual, expected)
+            // assert.deepEqual(actual, expected)
+            expect(actual).toEqual(expected)
         })
         it('Should return object: {number: 3} for "?number=3"', () => {
-            assert.deepEqual(parse('?number=3'), {number: '3'})
+            // assert.deepEqual(parse('?number=3'), {number: '3'})
+            expect(parse('?number=3')).toEqual({number: '3'})
         })
     })
     describe('The stringify function', () => {
@@ -26,7 +28,8 @@ describe('The query package', () => {
             }
             const actual = stringify(obj);
             const expected = 'from=tommy-lee-jones&popular=false&category=vuejs'
-            assert.equal(actual, expected)
+            // assert.equal(actual, expected)
+            expect(actual).toEqual(expected)
         })
         it('Should remove empty keys from query', () => {
             const obj = {
@@ -36,7 +39,8 @@ describe('The query package', () => {
             }
             const actual = stringify(obj);
             const expected = 'from=me'
-            assert.equal(actual, expected)
+            // assert.equal(actual, expected)
+            expect(actual).toEqual(expected)
         })
     })
 })
