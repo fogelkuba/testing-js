@@ -20,4 +20,4 @@ module.exports = [
         email: 'emily@gates.co.za',
         registered_on: '2017-11-09 19:00:00'
     }
-];
+];s
